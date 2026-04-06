@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  intern-hook:
+    build: .
+    container_name: intern-hook-bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1

@@ -34,8 +34,8 @@ def send_discord_webhook(jobs_df: pd.DataFrame):
         site = job.get('site', 'Unknown Site')
         
         embed = Embed(
-            title=f"{title.title()} @ {company.title()}",
-            description=f"📍 {location.title()}\nSource: {site.title()}",
+            title=f"{title} @ {company}",
+            description=f"📍 {location}\nSource: {site.title()}",
             url=job_url,
             color=discord.Color.blue()
         )

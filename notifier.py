@@ -30,7 +30,7 @@ def send_discord_webhook(jobs_df: pd.DataFrame):
         job_url = job.get('job_url', '#')
         site = job.get('site', 'Unknown Site').title()
         
-        entry = f"[{title} @ {company}]({job_url}) - 📍 {location} - {site}"
+        entry = f"[{title} @ {company}](<{job_url}>) - 📍 {location} - {site}"
         job_entries.append(entry)
 
     # Chunk the entries to fit Discord's 2000 character limit
